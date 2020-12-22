@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label prefHeight="74.0" prefWidth="324.0" text="Bøf med Løg!">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="84.0" text="Click in for how many persons!" />
+      <ImageView fitHeight="173.0" fitWidth="269.0" layoutX="637.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="BPersea" layoutX="14.0" layoutY="111.0" />
+      <TextArea layoutX="34.0" layoutY="190.0" prefHeight="295.0" prefWidth="824.0" />
+      <Label layoutX="168.0" layoutY="115.0" text="And click enter~" />
+   </children>
+</AnchorPane>
