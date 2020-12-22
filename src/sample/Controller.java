@@ -1,7 +1,5 @@
 package sample;
 
-
-
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
