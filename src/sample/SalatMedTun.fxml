@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label prefHeight="74.0" prefWidth="347.0" text="Salat med Tun">
          <font>
@@ -17,8 +14,8 @@
       </Label>
       <Label layoutX="33.0" layoutY="95.0" text="Click in for how many persons!" />
       <ImageView fitHeight="173.0" fitWidth="269.0" layoutX="628.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField fx:id="SPersea" layoutX="40.0" layoutY="121.0" />
-      <TextArea layoutX="34.0" layoutY="222.0" prefHeight="295.0" prefWidth="824.0" />
+      <TextField fx:id="SPersEa" layoutX="40.0" layoutY="121.0" onAction="#SPersEach" />
+      <TextArea fx:id="OpskriftS" layoutX="34.0" layoutY="222.0" prefHeight="295.0" prefWidth="824.0" />
       <Label layoutX="204.0" layoutY="125.0" text="And click enter~" />
    </children>
 </AnchorPane>
