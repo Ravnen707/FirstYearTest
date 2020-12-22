@@ -13,7 +13,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 
 public class Controller {
@@ -21,7 +21,17 @@ public class Controller {
     public TextArea OpskriftP; // Klasse Variabler
     public TextField PPersEa;
 
-
+    public ArrayList arraypasta() { // Metode Der returner en ArrayList
+        ArrayList<Pasta> pastas = new ArrayList<Pasta>(); // Arraylist her fra og ned til pastas.add.
+        pastas.add(new Pasta(100, "Gram Pasta"));
+        pastas.add(new Pasta(25, "Gram Bacon"));
+        pastas.add(new Pasta(1, "Tsk Smør"));
+        pastas.add(new Pasta(1, "Løg i tern"));
+        pastas.add(new Pasta(1, "Æg"));
+        pastas.add(new Pasta(13, "Gram Parmesan"));
+        pastas.add(new Pasta(13, "Gram Parmesan for tilbehør"));
+        return pastas; // returner
+    }
 
     public void buttonOnAction() throws IOException { //metode første button i KogebogGUI.fxml.
         String search = SearchBar.getText(); // text fra textfield.
@@ -69,7 +79,28 @@ public class Controller {
     }
 
     public void PPersEach() { // metode for Pasta Scene for TextArea
-
+        ArrayList<Pasta> pasto = arraypasta(); // Arraylist der kalder efter "arrayish return"
+        String search = PPersEa.getText(); // String der gør det muligt at bruge ord.
+        int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
+        PPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent t) {
+                if (t.getCode() == KeyCode.ENTER) {
+                    OpskriftP.clear();
+                    int total = 0;
+                    for (Pasta p : pasto) {
+                        total += p.tal;
+                        System.out.println(p.tal + " " + p.ord);
+                        OpskriftP.appendText(p.tal * antal + " " + p.ord + "\n");
+                    }
+                }
+            }
+        });
+        System.out.println("___________________________________________________");
+        System.out.println("Mad for hvor mange mennesker?");
+        System.out.println(antal);
+        System.out.println("Enter");
+// De her 4 linjer skriver det ned i Terminalen.
     }
 }
 
