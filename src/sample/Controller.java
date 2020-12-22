@@ -106,7 +106,7 @@ public class Controller {
     }
 
     public void PPersEach() { // metode for Pasta Scene for TextArea
-        ArrayList<Pasta> pasto = arraypasta(); // Arraylist der kalder efter "arrayish return"
+        ArrayList<Pasta> pasto = arraypasta(); // Arraylist der kalder efter "arraypasta return"
         String search = PPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         PPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -131,8 +131,7 @@ public class Controller {
     }
 
     public void BPersEach() {
-
-        ArrayList<Bøf> bøfo = arraybøf(); // Arraylist der kalder efter "arrayish return"
+        ArrayList<Bøf> bøfo = arraybøf(); // Arraylist der kalder efter "arraybøf return"
         String search = BPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         BPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -157,8 +156,7 @@ public class Controller {
     }
 
     public void SPersEach() {
-
-        ArrayList<Salat> salato = arraysalat(); // Arraylist der kalder efter "arrayish return"
+        ArrayList<Salat> salato = arraysalat(); // Arraylist der kalder efter "arraysalat return"
         String search = SPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         SPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
