@@ -1,5 +1,9 @@
 package sample;
 
+//import Opskrifter.Bøf;
+import Opskrifter.MadOpskrifter;
+//import Opskrifter.Pasta;
+//import Opskrifter.Salat;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,39 +28,39 @@ public class Controller {
     public TextField BPersEa;
 
     public ArrayList arraypasta() { // Metode Der returner en ArrayList
-        ArrayList<Pasta> pastas = new ArrayList<Pasta>(); // Arraylist her fra og ned til pastas.add.
-        pastas.add(new Pasta(100, "Gram Pasta"));
-        pastas.add(new Pasta(25, "Gram Bacon"));
-        pastas.add(new Pasta(1, "Tsk Smør"));
-        pastas.add(new Pasta(1, "Løg i tern"));
-        pastas.add(new Pasta(1, "Æg"));
-        pastas.add(new Pasta(13, "Gram Parmesan"));
-        pastas.add(new Pasta(13, "Gram Parmesan for tilbehør"));
+        ArrayList<MadOpskrifter.Pasta> pastas = new ArrayList<>(); // Arraylist her fra og ned til pastas.add.
+        pastas.add(new MadOpskrifter.Pasta(100, "Gram Pasta"));
+        pastas.add(new MadOpskrifter.Pasta(25, "Gram Bacon"));
+        pastas.add(new MadOpskrifter.Pasta(1, "Tsk Smør"));
+        pastas.add(new MadOpskrifter.Pasta(1, "Løg i tern"));
+        pastas.add(new MadOpskrifter.Pasta(1, "Æg"));
+        pastas.add(new MadOpskrifter.Pasta(13, "Gram Parmesan"));
+        pastas.add(new MadOpskrifter.Pasta(13, "Gram Parmesan for tilbehør"));
         return pastas; // returner
     }
     public ArrayList arraysalat() { // Metode Der returner en ArrayList
-        ArrayList<Salat> salats = new ArrayList<Salat>(); // Arraylist her fra og ned til pastas.add.
-        salats.add(new Salat(63, "Gram blandet salat"));
-        salats.add(new Salat(50, "Gram grønne bønner"));
-        salats.add(new Salat(50, "Gram sorte oliven"));
-        salats.add(new Salat(1, "tun Steak"));
-        salats.add(new Salat(2, "Kogte æg"));
-        salats.add(new Salat(1, "Rødløg"));
+        ArrayList<MadOpskrifter.Salat> salats = new ArrayList<>(); // Arraylist her fra og ned til pastas.add.
+        salats.add(new MadOpskrifter.Salat(63, "Gram blandet salat"));
+        salats.add(new MadOpskrifter.Salat(50, "Gram grønne bønner"));
+        salats.add(new MadOpskrifter.Salat(50, "Gram sorte oliven"));
+        salats.add(new MadOpskrifter.Salat(1, "tun Steak"));
+        salats.add(new MadOpskrifter.Salat(2, "Kogte æg"));
+        salats.add(new MadOpskrifter.Salat(1, "Rødløg"));
         return salats; // returner
     }
     public ArrayList arraybøf() { // Metode Der returner en ArrayList
-        ArrayList<Bøf> bøfs = new ArrayList<Bøf>(); // Arraylist her fra og ned til pastas.add.
-        bøfs.add(new Bøf(400, " Gram Hakkef Oksekød"));
-        bøfs.add(new Bøf(1, " Tsk Smør "));
-        bøfs.add(new Bøf(10, " Stilke Frisk Timian"));
-        bøfs.add(new Bøf(1, " Stks Løg"));
-        bøfs.add(new Bøf(1, " Spsk Worcester Sauce"));
-        bøfs.add(new Bøf(1, " Spsk Honning"));
-        bøfs.add(new Bøf(1, " Spsk HP-Sauce"));
-        bøfs.add(new Bøf(1, " Spsk Rødvinds- eller Balsamicoeddike"));
-        bøfs.add(new Bøf(1, " Glas Brun Sovs"));
-        bøfs.add(new Bøf(1, " Stks Stribet Bede"));
-        bøfs.add(new Bøf(4, " Drue Argurker"));
+        ArrayList<MadOpskrifter.Bøf> bøfs = new ArrayList<>(); // Arraylist her fra og ned til pastas.add.
+        bøfs.add(new MadOpskrifter.Bøf(400, " Gram Hakkef Oksekød"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Tsk Smør "));
+        bøfs.add(new MadOpskrifter.Bøf(10, " Stilke Frisk Timian"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Stks Løg"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Spsk Worcester Sauce"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Spsk Honning"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Spsk HP-Sauce"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Spsk Rødvinds- eller Balsamicoeddike"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Glas Brun Sovs"));
+        bøfs.add(new MadOpskrifter.Bøf(1, " Stks Stribet Bede"));
+        bøfs.add(new MadOpskrifter.Bøf(4, " Drue Argurker"));
         return bøfs; // returner
     }
 
@@ -66,21 +70,21 @@ public class Controller {
         switch (numbers) { // Start på Switch.
             case 1:
                 System.out.println("Pasta Carbonara"); // Viser det i Terminalen.
-                Parent root = FXMLLoader.load(getClass().getResource("PastaCabonaraGUI.fxml")); // kalder efter rigtige GUI.
+                Parent root = FXMLLoader.load(getClass().getResource("../GUI/PastaCabonaraGUI.fxml")); // kalder efter rigtige GUI.
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
                 stage.show(); // Laver en ny Scene.
                 break;
             case 2:
                 System.out.println("Bøf med løg");
-                Parent root1 = FXMLLoader.load(getClass().getResource("BøfMedLøg.fxml"));
+                Parent root1 = FXMLLoader.load(getClass().getResource("../GUI/BøfMedLøg.fxml"));
                 Stage stage1 = new Stage();
                 stage1.setScene(new Scene(root1));
                 stage1.show();
                 break;
             case 3:
                 System.out.println("Salat med Tun");
-                Parent root2 = FXMLLoader.load(getClass().getResource("SalatMedTun.fxml"));
+                Parent root2 = FXMLLoader.load(getClass().getResource("../GUI/SalatMedTun.fxml"));
                 Stage stage2 = new Stage();
                 stage2.setScene(new Scene(root2));
                 stage2.show();
@@ -106,7 +110,7 @@ public class Controller {
     }
 
     public void PPersEach() { // metode for Pasta Scene for TextArea
-        ArrayList<Pasta> pasto = arraypasta(); // Arraylist der kalder efter "arraypasta return"
+        ArrayList<MadOpskrifter.Pasta> pasto = arraypasta(); // Arraylist der kalder efter "arraypasta return"
         String search = PPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         PPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -115,7 +119,7 @@ public class Controller {
                 if (t.getCode() == KeyCode.ENTER) {
                     OpskriftP.clear();
                     int total = 0;
-                    for (Pasta p : pasto) {
+                    for (MadOpskrifter.Pasta p : pasto) {
                         total += p.tal;
                         System.out.println(p.tal + " " + p.ord);
                         OpskriftP.appendText(p.tal * antal + " " + p.ord + "\n");
@@ -131,7 +135,7 @@ public class Controller {
     }
 
     public void BPersEach() {
-        ArrayList<Bøf> bøfo = arraybøf(); // Arraylist der kalder efter "arraybøf return"
+        ArrayList<MadOpskrifter.Bøf> bøfo = arraybøf(); // Arraylist der kalder efter "arraybøf return"
         String search = BPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         BPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -140,7 +144,7 @@ public class Controller {
                 if (t.getCode() == KeyCode.ENTER) {
                     OpskriftB.clear();
                     int total = 0;
-                    for (Bøf b : bøfo) {
+                    for (MadOpskrifter.Bøf b : bøfo) {
                         total += b.tal;
                         System.out.println(b.tal + " " + b.ord);
                         OpskriftB.appendText(b.tal * antal + " " + b.ord + "\n");
@@ -156,7 +160,7 @@ public class Controller {
     }
 
     public void SPersEach() {
-        ArrayList<Salat> salato = arraysalat(); // Arraylist der kalder efter "arraysalat return"
+        ArrayList<MadOpskrifter.Salat> salato = arraysalat(); // Arraylist der kalder efter "arraysalat return"
         String search = SPersEa.getText(); // String der gør det muligt at bruge ord.
         int antal = Integer.parseInt(search); // int der gør det muligt at bruge tal.
         SPersEa.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -165,7 +169,7 @@ public class Controller {
                 if (t.getCode() == KeyCode.ENTER) {
                     OpskriftS.clear();
                     int total = 0;
-                    for (Salat s : salato) {
+                    for (MadOpskrifter.Salat s : salato) {
                         total += s.tal;
                         System.out.println(s.tal + " " + s.ord);
                         OpskriftS.appendText(s.tal * antal + " " + s.ord + "\n");

@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("Kogebog.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Kogebog.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 600, 275*1.5));
         primaryStage.show();
